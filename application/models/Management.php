@@ -78,7 +78,7 @@ class Management extends CI_Model {
         return $code = 0;
     }
 
-    // function update user
+    // function update user by id
     function update_student($id,$arr){
         $this->db->where('id',$id);
         $res = $this->db->update('students', $arr);
@@ -88,6 +88,7 @@ class Management extends CI_Model {
         return $code = 0;
     }
 
+    // function delete student by id
     function delete_student($id){
         $this->db->where('id',$id);
         $res = $this->db->delete('students');

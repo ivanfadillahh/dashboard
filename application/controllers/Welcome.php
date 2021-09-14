@@ -20,8 +20,16 @@ class Welcome extends CI_Controller {
 	public function dashboard()
 	{
 		if($this->session->userdata('status_login') !== null && $this->session->userdata('status_login') == true){
+			$this->load->view('dashboard');
+		}else{
+			redirect('Welcome');
+		}
+	}
+
+	public function students(){
+		if($this->session->userdata('status_login') !== null && $this->session->userdata('status_login') == true){
 			$var['students'] = $this->Management->get_students_list()->result_array();
-			$this->load->view('dashboard',$var);
+			$this->load->view('students',$var);
 		}else{
 			redirect('Welcome');
 		}
