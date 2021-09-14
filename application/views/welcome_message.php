@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Welcome to Login Panel</title>
 
 	<style type="text/css">
 
@@ -68,21 +68,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Welcome to Panel !</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<h4>Login Admin</h4>
+		<form action="<?= base_url()?>Welcome/do_login" method="post">
+			<label for="email">Email :</label><br>
+			<input required type="text" name="email" placeholder="Input your email address..." id="email" style="padding-left:5px;padding-top:3px;padding-bottom:3px;margin-top:10px;margin-bottom:25px;font-size:12px;width:170px;" autofocus><br>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+			<label for="password">Password :</label><br>
+			<input required type="password" name="password" placeholder="Input your password..." id="email" style="padding-left:5px;padding-top:3px;padding-bottom:3px;margin-top:10px;margin-bottom:25px;font-size:12px;width:170px;" autofocus><br>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+			<button type="submit" id="btn-submit" style="background-color:green;border:2px solid green;border-radius:3px;padding:5px 15px;font-size:12px;color:#fff;cursor:pointer;">Login</button>
+		</form>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<p class="footer">
+		<strong>Copyright &copy; Dashboard Panel <?= date('Y')?></strong>
+	</p>
 </div>
 
 </body>
