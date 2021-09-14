@@ -54,5 +54,9 @@
         </tbody>
     </table>
 
+    <p style="font-size:14px;font-weight:bold;">
+        <?php print_r($_SESSION['name']);?> - Last Login : <?php print_r($_SESSION['last_login']);?>
+    </p>
+
 </body>
 </html>

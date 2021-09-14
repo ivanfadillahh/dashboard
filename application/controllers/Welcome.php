@@ -10,11 +10,13 @@ class Welcome extends CI_Controller {
         $this->load->model('Management');
     }
 
+	// default view login
 	public function index()
 	{
 		$this->load->view('welcome_message');
 	}
 
+	// load view login if isset status_login == 1
 	public function dashboard()
 	{
 		if($this->session->userdata('status_login') !== null && $this->session->userdata('status_login') == true){
@@ -25,6 +27,7 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	// function login process & set session user login
 	public function do_login(){
 		$email = $_POST['email'];
 		$pass = md5($_POST['password']);
@@ -45,10 +48,12 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	// load view add student
 	public function add_student(){
 		$this->load->view('add_student');
 	}
 
+	// function add student
 	public function do_add_student(){
 		$pass = 'student'.date('Y');
 		$arr = array(
@@ -68,11 +73,13 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	// load view update student
 	public function update_student($id){
 		$var['id'] = $id;
 		$this->load->view('update_student',$var);
 	}
 
+	// function update student by selected id
 	public function do_update_student(){
 		$id = $_POST['id'];
 		$arr = array(
@@ -87,6 +94,7 @@ class Welcome extends CI_Controller {
 		redirect('Welcome/update_student','refresh');
 	}
 
+	// function delete student by selected id
 	public function delete_student($id){
 		$res = $this->Management->delete_student($id);
 		if($res == 1){
@@ -95,6 +103,7 @@ class Welcome extends CI_Controller {
 		redirect('Welcome/dashboard','refresh');
 	}
 
+	// function logout & destroy session
 	public function logout(){
 		if($this->session->userdata('status_login') !== null && $this->session->userdata('status_login') == true){
 			$this->Management->last_login();

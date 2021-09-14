@@ -13,3 +13,5 @@ ERROR - 2021-09-14 14:05:14 --> Severity: Notice --> Undefined index: id D:\Mast
 ERROR - 2021-09-14 14:05:14 --> Severity: Notice --> Undefined index: id D:\Master All Files\xampp\htdocs\panel\application\views\dashboard.php 50
 ERROR - 2021-09-14 14:05:14 --> Severity: Notice --> Undefined index: id D:\Master All Files\xampp\htdocs\panel\application\views\dashboard.php 50
 ERROR - 2021-09-14 14:05:14 --> Severity: Notice --> Undefined index: id D:\Master All Files\xampp\htdocs\panel\application\views\dashboard.php 50
+ERROR - 2021-09-14 10:38:56 --> 404 Page Not Found: Dashboard/index
+ERROR - 2021-09-14 10:39:00 --> 404 Page Not Found: Dashboard/index
