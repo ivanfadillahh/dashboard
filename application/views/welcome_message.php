@@ -26,7 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	h1 {
 		color: #444;
-		background-color: transparent;
+		/* background-color: transparent; */
+		background-color: #333;
+		color:#fff;
 		border-bottom: 1px solid #D0D0D0;
 		font-size: 19px;
 		font-weight: normal;
@@ -67,23 +69,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<div id="container">
-	<h1>Welcome to Panel !</h1>
+<div id="container" style="margin-right:35%;margin-left:35%;text-align:center">
+	<h1>Login Admin</h1>
 
 	<div id="body">
-		<h4>Login Admin</h4>
 		<form action="<?= base_url()?>Welcome/do_login" method="post">
-			<label for="email">Email :</label><br>
-			<input required type="text" name="email" placeholder="Input your email address..." id="email" style="padding-left:5px;padding-top:3px;padding-bottom:3px;margin-top:10px;margin-bottom:25px;font-size:12px;width:170px;" autofocus><br>
+			<!-- <label for="email">Email :</label><br> -->
+			<input required type="text" name="email" placeholder="Input your email address..." id="email" style="padding-left:5px;padding-top:6px;padding-bottom:6px;margin-top:10px;margin-bottom:25px;font-size:12px;width:170px;border:2px solid #cccccc;border-radius:5px;" autofocus><br>
 
-			<label for="password">Password :</label><br>
-			<input required type="password" name="password" placeholder="Input your password..." id="email" style="padding-left:5px;padding-top:3px;padding-bottom:3px;margin-top:10px;margin-bottom:25px;font-size:12px;width:170px;" autofocus><br>
+			<!-- <label for="password">Password :</label><br> -->
+			<input required type="password" name="password" placeholder="Input your password..." id="email" style="padding-left:5px;padding-top:6px;padding-bottom:6px;margin-top:10px;margin-bottom:25px;font-size:12px;width:170px;border:2px solid #cccccc;border-radius:5px;" autofocus><br>
 
 			<button type="submit" id="btn-submit" style="background-color:green;border:2px solid green;border-radius:3px;padding:5px 15px;font-size:12px;color:#fff;cursor:pointer;">Login</button>
 		</form>
 	</div>
 
-	<p class="footer">
+	<p class="footer" style="text-align:center;">
 		<strong>Copyright &copy; Dashboard Panel <?= date('Y')?></strong>
 	</p>
 </div>
